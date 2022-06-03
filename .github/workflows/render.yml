@@ -32,8 +32,7 @@ jobs:
           pip install --no-cache-dir -r ./requirements.txt
       - name: Build documentation
         run: |
-          # Turn warnings into errors and ensure .doctrees is not deployed:
-          sphinx-build -b html -WT --keep-going source build/draft -d doctrees
+          sphinx-build -b html --keep-going source build/draft -d doctrees
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         if: ${{ github.event_name == 'pull_request'}}
