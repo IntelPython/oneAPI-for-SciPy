@@ -12,8 +12,10 @@
 #
 # import os
 # import sys
-# sys.path.insert(0, os.path.abspath('.'))
 
+from sphinx.application import Sphinx
+
+# sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
 
@@ -54,15 +56,14 @@ exclude_patterns = ["_build"]
 # a list of builtin themes.
 #
 html_theme = "sphinx_book_theme"
-html_logo = "_static/logo-wide.svg"
-html_favicon = "_static/logo-square.svg"
+html_logo = "_static/oneAPI-rgb-3000@2x.png"
+html_favicon = "_static/oneAPI-rgb-3000@2x.png"
 html_title = ""
 html_theme_options = {
     "home_page_in_toc": True,
     "github_url": "https://github.com/oleksandr-pavlyk/oneAPI-for-SciPy",
     "repository_url": "https://github.com/oleksandr-pavlyk/oneAPI-for-SciPy",
     "repository_branch": "master",
-    "path_to_docs": "docs",
     "use_repository_button": True,
     "use_edit_page_button": True,
 }
@@ -81,8 +82,8 @@ myst_enable_extensions = [
     "html_image",
     "colon_fence",
     "smartquotes",
-    "replacements",
     "linkify",
+    "replacements",
     "strikethrough",
     "substitution",
     "tasklist",
@@ -114,13 +115,4 @@ nitpick_ignore = [
 
 def setup(app: Sphinx):
     """Add functions to the Sphinx setup."""
-    from myst_parser._docs import (
-        DirectiveDoc,
-        DocutilsCliHelpDirective,
-        MystConfigDirective,
-    )
-
     app.add_css_file("custom.css")
-    app.add_directive("myst-config", MystConfigDirective)
-    app.add_directive("docutils-cli-help", DocutilsCliHelpDirective)
-    app.add_directive("doc-directive", DirectiveDoc)
