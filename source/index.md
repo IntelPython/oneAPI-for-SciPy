@@ -1,20 +1,9 @@
-.. SciPy 2022: oneAPI for Scientific Python Community documentation master file, created by
-   sphinx-quickstart on Fri Jun  3 11:14:24 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+# oneAPI for Scientific Python Community
+## Diptorup Deb and Oleksandr Pavlyk, Intel Corp.
+### Virtual poster SciPy 2022
 
-Welcome to SciPy 2022: oneAPI for Scientific Python Community's documentation!
-==============================================================================
+#### What is oneAPI?
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+[oneAPI](https://www.oneapi.io/) is an open standard for a unified application
+programming interface (API) that delivers a common developer experience across
+accelerator architectures.
