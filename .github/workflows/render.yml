@@ -64,4 +64,4 @@ jobs:
       - name: Push changes
         if: "success() && github.event_name != 'pull_request'"
         run: |
-          git push "https://oleksandr-pavlyk:$GITHUB_TOKEN@github.com/${{ github.repository }}.git"
+          git push tockened_docs gh-pages
