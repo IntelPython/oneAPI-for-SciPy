@@ -32,7 +32,8 @@ jobs:
           pip install --no-cache-dir -r ./requirements.txt
       - name: Build documentation
         run: |
-          sphinx-build -b html --keep-going source build/draft -d doctrees
+          # warnings are errors
+          sphinx-build -b html -WT --keep-going source build/draft -d doctrees
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         if: ${{ github.event_name == 'pull_request'}}
@@ -46,8 +47,9 @@ jobs:
           git config --global user.email 'github-actions[doc-deploy-bot]@users.noreply.github.com'
       - name: Checkout gh-pages
         run: |
+          git remote add tokened_docs https://oleksandr-pavlyk:${{ secrets.GITHUB_TOKEN }}@github.com/oleksandr-pavlyk/oneAPI-for-SciPy.git
           git fetch --all
-          git checkout gh-pages
+          git checkout --track tokened_docs/gh-pages
       - name: Copy build artifact
         run: |
           rm -rf ./draft && cp -R ./build/draft ./draft
