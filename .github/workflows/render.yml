@@ -58,4 +58,4 @@ jobs:
       - name: Push changes
         if: "success() && github.event_name != 'pull_request'"
         run: |
-          git push "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/${{ github.repository }}.git"
+          git push "https://oleksandr-pavlyk:$GITHUB_TOKEN@github.com/${{ github.repository }}.git"
