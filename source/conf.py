@@ -102,9 +102,9 @@ intersphinx_mapping = {
     "python": ("https://docs.python.org/3.10", None),
     "sphinx": ("https://www.sphinx-doc.org/en/master", None),
     "markdown_it": ("https://markdown-it-py.readthedocs.io/en/latest", None),
-    "dpctl": ("https://intelpython.github.io/dpctl", None),
+    "dpctl": ("https://intelpython.github.io/dpctl/latest", None),
     "dpnp": ("https://intelpython.github.io/dpnp", None),
-    "numba_dpex": ("https://intelpython.github.io/numba-dpex", None),
+    "numba_dpex": ("https://intelpython.github.io/numba-dpex/latest", None),
     "numba": ("http://numba.pydata.org/numba-doc/latest/", None),
 }
 
