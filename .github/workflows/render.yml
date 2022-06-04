@@ -9,7 +9,7 @@ on:
 
 permissions:
   pages: write
-  deplotments: write
+  deployments: write
 
 jobs:
   build-and-deploy:
