@@ -64,4 +64,4 @@ jobs:
       - name: Push changes
         if: "success() && github.event_name != 'pull_request'"
         run: |
-          git push tockened_docs gh-pages
+          git push tokened_docs gh-pages
