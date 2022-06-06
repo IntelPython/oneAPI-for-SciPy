@@ -35,7 +35,7 @@ jobs:
       - name: Build documentation
         run: |
           # warnings are errors
-          sphinx-build -b html -WT --keep-going poster build/draft -d doctrees
+          sphinx-build -b html -WT --keep-going poster build -d doctrees
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         if: ${{ github.event_name == 'pull_request'}}
@@ -54,7 +54,7 @@ jobs:
           git checkout --track tokened_docs/gh-pages
       - name: Copy build artifact
         run: |
-          rm -rf ./draft && cp -R ./build/draft ./
+          rm -rf -v build && cp -R ./build/ .
       - name: Commit changes
         run: |
           git add . && git commit -m "Deploy: ${{ github.sha }}"
