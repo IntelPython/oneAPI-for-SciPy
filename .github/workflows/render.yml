@@ -53,8 +53,10 @@ jobs:
           git fetch --all
           git checkout --track tokened_docs/gh-pages
       - name: Copy build artifact
+        shell: bash -l {0}
         run: |
-          rm -rf -v !(build) && cp -R ./build/ .
+          rm -rf -v !(build)
+          cp -R ./build/ .
       - name: Commit changes
         run: |
           git add . && git commit -m "Deploy: ${{ github.sha }}"
