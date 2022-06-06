@@ -55,7 +55,7 @@ jobs:
       - name: Copy build artifact
         shell: bash -l {0}
         run: |
-          find . -name "*" | grep -v "./build" | grep -ve "^\.$" | grep "./." | xargs rm -rf
+          find . -name "*" | grep -v "./build" | grep -ve "^\.$" | grep -v "./." | xargs rm -rf
           cp -R ./build/* .
       - name: Commit changes
         run: |
