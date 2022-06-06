@@ -54,7 +54,7 @@ jobs:
           git checkout --track tokened_docs/gh-pages
       - name: Copy build artifact
         run: |
-          rm -rf -v build && cp -R ./build/ .
+          rm -rf -v !(build) && cp -R ./build/ .
       - name: Commit changes
         run: |
           git add . && git commit -m "Deploy: ${{ github.sha }}"
