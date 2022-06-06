@@ -35,7 +35,7 @@ jobs:
       - name: Build documentation
         run: |
           # warnings are errors
-          sphinx-build -b html -WT --keep-going poster/draft build -d doctrees
+          sphinx-build -b html -WT --keep-going poster build/draft -d doctrees
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         if: ${{ github.event_name == 'pull_request'}}
