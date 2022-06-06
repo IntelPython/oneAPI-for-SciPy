@@ -58,7 +58,7 @@ exclude_patterns = ["_build"]
 html_theme = "sphinx_book_theme"
 html_logo = "_static/oneAPI-rgb-3000@2x.png"
 html_favicon = "_static/oneAPI-rgb-3000@2x.png"
-html_title = ""
+html_title = "oneAPI for Scientific Python Community: virtual poster for SciPy 2022"
 html_theme_options = {
     "home_page_in_toc": True,
     "github_url": "https://github.com/oleksandr-pavlyk/oneAPI-for-SciPy",
