@@ -35,7 +35,7 @@ jobs:
       - name: Build documentation
         run: |
           # warnings are errors
-          sphinx-build -b html -WT --keep-going poster build -d doctrees
+          sphinx-build -b html -WT --keep-going poster/draft build -d doctrees
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         if: ${{ github.event_name == 'pull_request'}}
@@ -55,11 +55,11 @@ jobs:
       - name: Copy build artifact
         shell: bash -l {0}
         run: |
-          find . -name "*" | grep -v "./build" | grep -ve "^\.$" | grep -v "./." | xargs rm -rf
-          cp -R ./build/* .
+          rm -rf ./draft
+          cp -R ./build/draft ./draft
       - name: Commit changes
         run: |
-          git add . && git commit -m "Deploy: ${{ github.sha }}"
+          git add draft && git commit -m "Deploy: ${{ github.sha }}"
         continue-on-error: true
       - name: Push changes
         if: "success() && github.event_name != 'pull_request'"
