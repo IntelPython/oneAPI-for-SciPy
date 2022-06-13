@@ -25,7 +25,7 @@ Explain anatomy of DPC++ executable, and [layered architecture of oneAPI][layere
 ```
 
 ```{note} **TODO**
-Python extensions created by DPC++.
+Python extensions created by DPC++. [Scikit-build](./skbuild.md)
 ```
 
 ```{note} **TODO**
