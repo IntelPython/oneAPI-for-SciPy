@@ -40,7 +40,7 @@ heterogeneous systems using C++ and SYCL*.
 Intel(R) DevCloud hosts [base training material][base-training-modules] which can be executed
 on the variety of Intel(R) hardware using preinstalled oneAPI toolkits.
 
-Julia support for oneAPI.
+Julia has support for oneAPI [github.com/JuliaGPU/oneAPI.jl][julia-oneAPI].
 
 [oneAPI]: https://www.oneapi.io
 [toolkits]: https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html
@@ -52,3 +52,4 @@ Julia support for oneAPI.
 [sycl-five-additions]: https://www.intel.com/content/www/us/en/developer/articles/technical/five-outstanding-additions-sycl2020.html
 [base-training-modules]: https://devcloud.intel.com/oneapi/get_started/baseTrainingModules/
 [dpcpp-book]: https://link.springer.com/book/10.1007%2F978-1-4842-5574-2
+[julia-oneAPI]: https://github.com/JuliaGPU/oneAPI.jl
