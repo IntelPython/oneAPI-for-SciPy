@@ -15,7 +15,7 @@ Intel(R) oneAPI Math Kernel Library ([oneMKL][oneMKL]), etc.
 
 ```{image} _static/oneapi_basekit.webp
 :alt: Intel oneAPI Base Toolkit
-:width: 200px
+:width: 1072px
 :align: center
 ```
 
