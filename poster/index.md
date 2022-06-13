@@ -13,7 +13,7 @@ an industry-leading C++ compiler that implements [SYCL*][sycl], an evolution of 
 for heterogeneous computing. It also includes a suite of performance libraries, such as
 Intel(R) oneAPI Math Kernel Library ([oneMKL][oneMKL]), etc.
 
-```{image} oneapi_basekit.png
+```{image} _static/oneapi_basekit.webp
 :alt: Intel oneAPI Base Toolkit
 :width: 200px
 :align: center
