@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # oneAPI Python extensions
 
 DPC++
