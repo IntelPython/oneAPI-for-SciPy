@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # oneAPI Python extensions
 
 DPC++ is a single source compiler. It generates [both the host code and the device code][compilation-flow] in a single fat binary.

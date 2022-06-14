@@ -39,6 +39,7 @@
     <link rel="shortcut icon" href="_static/oneAPI-rgb-3000@2x.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="What is oneAPI?" href="oneapi.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -98,7 +99,24 @@
                 </a>
             </li>
         </ul>
-        
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Sections
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="oneapi.html">
+   What is oneAPI?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="skbuild.html">
+   oneAPI Python extensions
+  </a>
+ </li>
+</ul>
+
     </div>
 </nav></div>
         <div class="bd-sidebar__bottom">
@@ -252,41 +270,12 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-oneapi">
-   What is oneAPI?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#additional-information">
-   Additional information
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
@@ -298,24 +287,6 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-oneapi">
-   What is oneAPI?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#additional-information">
-   Additional information
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -326,42 +297,13 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="oneapi-for-scientific-python-community">
 <h1>oneAPI for Scientific Python Community<a class="headerlink" href="#oneapi-for-scientific-python-community" title="Permalink to this headline">#</a></h1>
 <p>by Diptorup Deb and Oleksandr Pavlyk, Intel Corp.</p>
-<section id="what-is-oneapi">
-<h2>What is oneAPI?<a class="headerlink" href="#what-is-oneapi" title="Permalink to this headline">#</a></h2>
-<p><a class="reference external" href="https://www.oneapi.io">oneAPI</a> is an open standard for a unified application
-programming interface (API) that delivers a common developer experience across
-accelerator architectures, including multi-core CPUs, GPUs, and FPGAs.</p>
-<p>A freely available implementation of the standard is available through
-<a class="reference external" href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html">Intel® oneAPI Toolkits</a>. The <a class="reference external" href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit.html">Intel® Base Toolkit</a> features
-an industry-leading C++ compiler that implements <a class="reference external" href="https://www.khronos.org/sycl/">SYCL*</a>, an evolution of C++
-for heterogeneous computing. It also includes a suite of performance libraries, such as
-Intel® oneAPI Math Kernel Library (<a class="reference external" href="https://www.intel.com/content/www/us/en/develop/documentation/oneapi-programming-guide/top/api-based-programming/intel-oneapi-math-kernel-library-onemkl.html">oneMKL</a>), etc, as well as
-<a class="reference external" href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/distribution-for-python.html">Intel® Distribution for Python*</a>.</p>
-<a class="reference internal image-reference" href="_images/oneapi_basekit.webp"><img alt="Intel oneAPI Base Toolkit" class="align-center" src="_images/oneapi_basekit.webp" style="width: 1072px;" /></a>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>TODO</strong>
-Explain anatomy of DPC++ executable, and <a class="reference external" href="https://www.intel.com/content/www/us/en/developer/articles/technical/expanding-oneapi-support-for-languages-and-accelerators.html">layered architecture of oneAPI</a>.</p>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sections</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="oneapi.html">What is oneAPI?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skbuild.html">oneAPI Python extensions</a></li>
+</ul>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>TODO</strong>
-Python extensions created by DPC++. <a class="reference internal" href="skbuild.html"><span class="doc std std-doc">Scikit-build</span></a></p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>TODO</strong>
-Explain intel/llvm support for <a class="reference external" href="https://www.intel.com/content/www/us/en/developer/articles/technical/five-outstanding-additions-sycl2020.html">multiple backends</a>.</p>
-</div>
-</section>
-<section id="additional-information">
-<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">#</a></h2>
-<p><a class="reference external" href="https://link.springer.com/book/10.1007%2F978-1-4842-5574-2">Data Parallel C++ book</a> is an excellent resource to get familiar with programming
-heterogeneous systems using C++ and SYCL*.</p>
-<p>Intel® DevCloud hosts <a class="reference external" href="https://devcloud.intel.com/oneapi/get_started/baseTrainingModules/">base training material</a> which can be executed
-on the variety of Intel® hardware using preinstalled oneAPI toolkits.</p>
-<p>Julia has support for oneAPI <a class="reference external" href="https://github.com/JuliaGPU/oneAPI.jl">github.com/JuliaGPU/oneAPI.jl</a>.</p>
-</section>
 </section>
 
 
@@ -372,6 +314,13 @@ on the variety of Intel® hardware using preinstalled oneAPI toolkits.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="oneapi.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">What is oneAPI?</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
