@@ -19,48 +19,75 @@ jobs:
         uses: styfle/cancel-workflow-action@0.6.0
         with:
           access_token: ${{ github.token }}
+
       - name: Checkout sources
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          submodules: true
           persist-credentials: false
-      - name: Setup Python
-        uses: actions/setup-python@v2
+
+      - name: Install Golang
+        shell: bash -l {0}
+        run: |
+          sudo apt-get install golang
+
+      - uses: actions/setup-node@v3
         with:
-          python-version: '3.10'
-          architecture: x64
-      - name: Install dependencies
+          node-version: 16
+
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build site
+        shell: bash -l {0}
         run: |
-          pip install --no-cache-dir -r ./requirements.txt
-      - name: Build documentation
-        run: |
-          # warnings are errors
-          sphinx-build -b html -WT --keep-going poster build/draft -d doctrees
-      - name: Upload build artifact
+          hugo version
+          npm --version
+          node -v
+          cd scipy-poster
+          sudo npm cache clean -f
+          npm install -D autoprefixer
+          npm install -D postcss-cli
+          npm install -D postcss
+          hugo --minify || exit 1
+          cp -r ./public ~/public || exit 1
+          git checkout .
+
+      - name: Deploy site
         uses: actions/upload-artifact@v2
         if: ${{ github.event_name == 'pull_request'}}
         with:
           name: html
-          path: build/
+          path: ./scipy-poster/public
           if-no-files-found: error
+
       - name: Configure Git
         run: |
           git config --global user.name 'github-actions[doc-deploy-bot]'
           git config --global user.email 'github-actions[doc-deploy-bot]@users.noreply.github.com'
+
       - name: Checkout gh-pages
         run: |
           git remote add tokened_docs https://oleksandr-pavlyk:${{ secrets.GITHUB_TOKEN }}@github.com/oleksandr-pavlyk/oneAPI-for-SciPy.git
           git fetch --all
           git checkout --track tokened_docs/gh-pages
+
       - name: Copy build artifact
         shell: bash -l {0}
         run: |
-          rm -rf ./draft
-          cp -R ./build/draft ./draft
+          rm -rf *
+          cp -R ~/public/* .
+
       - name: Commit changes
         run: |
-          git add draft && git commit -m "Deploy: ${{ github.sha }}"
+          git add . && git commit -m "Deploy: ${{ github.sha }}"
         continue-on-error: true
+
       - name: Push changes
         if: "success() && github.event_name != 'pull_request'"
         run: |
