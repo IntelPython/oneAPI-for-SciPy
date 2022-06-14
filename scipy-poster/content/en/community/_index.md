@@ -1,8 +1,11 @@
----
-title: Community
-menu:
-  main:
-    weight: 40
----
+# Getting in touch
 
-<!--add blocks of content here to add more sections to the community page -->
+We would love your feedback.
+
+You can reach us on Gitter in [Data-Parallel-Python room][gitter], or by filing
+an issue at [dpctl][dpctl], [dpnp][dpnp] or [numba-dpex][numba-dpex] repos.
+
+[gitter]: https://gitter.im/Data-Parallel-Python/community
+[dpctl]: https://github.com/IntelPython/dpctl.git
+[dpnp]: https://github.com/IntelPython/dpnp.git
+[numba-dpex]: https://github.com/IntelPython/numba-dpex.git
