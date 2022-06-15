@@ -4,7 +4,7 @@ date: 2022-06-14
 type: docs
 weight: 2
 description: >
-  Definition of oneAPI standard and Intel(R) oneAPI toolkits implementation of the standard.
+  oneAPI - the standard and its implementation.
 ---
 
 [oneAPI][oneAPI] is an open standard for a unified application
@@ -18,19 +18,25 @@ for heterogeneous computing. It also includes a suite of performance libraries, 
 Intel(R) oneAPI Math Kernel Library ([oneMKL][oneMKL]), etc, as well as
 [Intel(R) Distribution for Python*][idp].
 
-![](_static/oneapi_basekit.webp)
+![Intel Base Toolkit][1]
 
-{{% alert title="Note" %}}
-Explain anatomy of DPC++ executable, and [layered architecture of oneAPI][layered-architecture].
-{{% /alert %}}
+[1]: ../../images/oneapi_basekit.webp "Composition of Intel Base Toolkit"
 
-```{note} **TODO**
-Python extensions created by DPC++. [Scikit-build](./skbuild.md)
-```
+DPC++ is a LLVM-based compiler project that implements compiler and runtime support for SYCL* language. 
+It is being developed in `sycl` branch of the LLVM project fork [github.com/intel/llvm][intel-llvm].
+The project publishes [daily builds][llvm-daily-prereleases] for Linux. 
 
-```{note} **TODO**
-Explain intel/llvm support for [multiple backends][sycl-five-additions].
-```
+Intel(R) oneAPI DPC++ compiler is a proprietary product that builds on the open-source DPC++ project.
+It is part of Intel(R) compiler suite which has completed the [adoption of LLVM infrastructure][icx-adopts-llvm] and is available in oneAPI toolkits.
+In particular, Intel(R) Fortran compiler is freely avialable on all supported platforms in [Intel(R) oneAPI HPC Toolkit][hpckit].
+
+In order to enable cross-architecture programming for CPUs and accelerators the DPC++ runtime adopted [layered architecture][layered-architecture].
+Software concepts are mapped to hardware abstraction layer by user-specified [SYCL backend][sycl-five-additions] which programs the specific hardware in use.
+
+DPC++ leverages standard toolchain runtime libraries, such as `libstdc++` on Linux and `winrt` on Windows. This makes it possible to use
+Intel C/C++ compilers, including DPC++, to compile Python [native extensions](skbuild.mc) compatible with the CPython and the rest of Python stack. 
+
+
 
 ## Additional information
 
@@ -45,6 +51,7 @@ Julia has support for oneAPI [github.com/JuliaGPU/oneAPI.jl][julia-oneAPI].
 [oneAPI]: https://www.oneapi.io
 [toolkits]: https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html
 [basekit]: https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit.html
+[hpckit]: https://www.intel.com/content/www/us/en/developer/tools/oneapi/hpc-toolkit.html
 [sycl]: https://www.khronos.org/sycl/
 [oneMKL]: https://www.intel.com/content/www/us/en/develop/documentation/oneapi-programming-guide/top/api-based-programming/intel-oneapi-math-kernel-library-onemkl.html
 [idp]: https://www.intel.com/content/www/us/en/developer/tools/oneapi/distribution-for-python.html
@@ -53,3 +60,6 @@ Julia has support for oneAPI [github.com/JuliaGPU/oneAPI.jl][julia-oneAPI].
 [base-training-modules]: https://devcloud.intel.com/oneapi/get_started/baseTrainingModules/
 [dpcpp-book]: https://link.springer.com/book/10.1007%2F978-1-4842-5574-2
 [julia-oneAPI]: https://github.com/JuliaGPU/oneAPI.jl
+[intel-llvm]: https://github.com/intel/llvm.git
+[icx-adopts-llvm]: https://www.intel.com/content/www/us/en/developer/articles/technical/adoption-of-llvm-complete-icx.html
+[llvm-daily-prereleases]: https://github.com/intel/llvm/releases
