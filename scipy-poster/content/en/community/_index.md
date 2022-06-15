@@ -1,3 +1,13 @@
+---
+title: "Community for Data Parallel Python extensions"
+linkTitle: Community
+type: community
+menu:
+  main:
+    weight: 10
+
+---
+
 # Getting in touch
 
 We would love your feedback.

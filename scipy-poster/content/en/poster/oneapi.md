@@ -1,12 +1,11 @@
 ---
 title: "What is oneAPI"
 date: 2022-06-14
+type: docs
 weight: 2
 description: >
   Definition of oneAPI standard and Intel(R) oneAPI toolkits implementation of the standard.
 ---
-
-# What is oneAPI?
 
 [oneAPI][oneAPI] is an open standard for a unified application
 programming interface (API) that delivers a common developer experience across
@@ -19,15 +18,11 @@ for heterogeneous computing. It also includes a suite of performance libraries, 
 Intel(R) oneAPI Math Kernel Library ([oneMKL][oneMKL]), etc, as well as
 [Intel(R) Distribution for Python*][idp].
 
-```{image} _static/oneapi_basekit.webp
-:alt: Intel oneAPI Base Toolkit
-:width: 1072px
-:align: center
-```
+![](_static/oneapi_basekit.webp)
 
-```{note} **TODO**
+{{% alert title="Note" %}}
 Explain anatomy of DPC++ executable, and [layered architecture of oneAPI][layered-architecture].
-```
+{{% /alert %}}
 
 ```{note} **TODO**
 Python extensions created by DPC++. [Scikit-build](./skbuild.md)

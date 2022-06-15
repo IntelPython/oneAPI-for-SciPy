@@ -1,6 +1,7 @@
 ---
 title: "oneAPI Python extensions"
 date: 2022-06-14
+type: docs
 weight: 2
 description: >
   Python extensions can be built with DPC++. This is how.
