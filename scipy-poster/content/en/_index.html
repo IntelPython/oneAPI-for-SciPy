@@ -1,24 +1,44 @@
 +++
-title = "Data Parallel Extensions for Python"
-linkTitle = "DPEX4Py"
+title = "oneAPI for Scientific Python Community"
 
 +++
 
-{{< blocks/cover title="Data Parallel Extensions for Python: Bringing oneAPI to the Scientific Python Community!" image_anchor="top" height="600" color="orange" >}}
-<div class="mx-auto">
-	<a class="btn btn-lg btn-primary mr-3 mb-4" href="{{< relref "/docs" >}}">
-		Learn More <i class="fas fa-arrow-alt-circle-right ml-2"></i>
-	</a>
-	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="https://github.com/google/docsy-example">
-		Download <i class="fab fa-github ml-2 "></i>
-	</a>
-	<p class="lead mt-5"></p>
-	{{< blocks/link-down color="info" >}}
+{{<blocks/cover title="" image_anchor="center" height="min" color="light">}}
+<div class="row align-items-center mt-3 pt-3">
+  <div class="col-lg-6 mt-5 mt-lg-3 d-sm-block" style="display: none">
+    <img alt="Py-ninja" width="650" height="500" src="images/py-ninja.png" />
+  </div>
+  <div class="col-lg-6">
+    <p class="display-2 mb-0">oneAPI for Scientific Python Computing</p>
+    <p></p>
+    <a href="mailto:diptorup.deb@intel.com">Diptorup Deb</a> and
+    <a href="mailto:oleksandr.pavlyk@intel.com">Oleksandr Pavlyk</a>
+  </div>
 </div>
-{{< /blocks/cover >}}
+<div class="col-12 pt-5">
+  <div class="pt-2 lead text-center">
+    <div class="mx-auto mt-5 mb-5">
+      <a class="btn btn-lg btn-secondary mr-3 mb-4" href="/en/docs/quickstart/">
+        Get Started <i class="fas fa-arrow-alt-circle-right ml-2"></i>
+      </a>
+      <a class="btn btn-lg btn-primary mr-3 mb-4" href="/en/docs/">
+        Learn More <i class="fas fa-book-reader ml-2"></i>
+      </a>
+      <p class="lead mt-1"></p>
+	  {{< blocks/link-down color="info" >}}
+    </div>
+  </div>
+</div>
+{{</blocks/cover>}}
+
 
 
 {{% blocks/lead color="primary" %}}
+<div class="row feature-section">
+    <div class="col-lg-6 center-text" style="margin-bottom: 20px">
+    <h2 class="section-title">What is oneAPI?</h2>
+    </div>
+</div>
 
 [oneAPI][oneAPI] is an open standard for a unified application
 programming interface (API) that delivers a common developer experience across
@@ -65,15 +85,142 @@ For announcement of latest features etc.
 
 {{< /blocks/section >}}
 
+<!--- The Features Section --->
+<div class="container">
+    <div class="row feature-section">
+      <div class="col-lg-12 center-text" style="margin-bottom: 50px">
+        <h2 class="section-title">Features</h2>
+      </div>
+      <div class="col-lg-4">
+        <div class="feature-card">
+          <div class="card-header-custom">
+            <img
+              src="/images/kubernetes-native.svg"
+              width="36px"
+              class="img-card-header"
+            />
+            <h4 class="section-text-bold">Kubernetes Native</h4>
+          </div>
+          <p class="section-text">
+            Fission is open source under the Apache License. It works on a
+            Kubernetes cluster anywhere: in your private datacenter, in a public
+            cloud, or on your laptop.
+          </p>
+        </div>
+      </div>
 
-{{< blocks/section >}}
-<div class="col">
-<h1 class="text-center">This is the second Section</h1>
-</div>
+      <div class="col-lg-4">
+        <div class="feature-card">
+          <div class="card-header-custom">
+            <img
+              src="/images/fast-cold.svg"
+              width="36px"
+              class="img-card-header"
+            />
+            <h4 class="section-text-bold">Fast Cold-Start</h4>
+          </div>
+          <p class="section-text">
+            Fission maintains a configurable pool of containers, so your
+            functions have very low cold-start latencies, typically ~100msec.
+          </p>
+        </div>
+      </div>
 
-{{< /blocks/section >}}
+      <div class="col-lg-4">
+        <div class="feature-card">
+          <div class="card-header-custom">
+            <img
+              src="/images/declarative.svg"
+              width="36px"
+              class="img-card-header"
+            />
+            <h4 class="section-text-bold">
+              Declarative Application Specifications
+            </h4>
+          </div>
+          <p class="section-text">
+            Declarative specifications give the developer the capability to
+            define a function once and then deploy it anywhere. Fission
+            resources (functions, triggers etc.) can be checked into source
+            control, and the application can be recreated from them.
+          </p>
+        </div>
+      </div>
 
+      <div class="col-lg-4">
+        <div class="feature-card">
+          <div class="card-header-custom">
+            <img
+              src="/images/administration.svg"
+              width="36px"
+              class="img-card-header"
+            />
+            <h4 class="section-text-bold">
+              Administration & Operational Simplicity
+            </h4>
+          </div>
+          <p class="section-text">
+            Fission aims for operational simplicity by incorporating logs
+            directly into the CLI, via integration with Fluentd. It also
+            integrates with Prometheus for metrics tracking and dashboard
+            visibility.
+          </p>
+        </div>
+      </div>
 
+      <div class="col-lg-4">
+        <div class="feature-card">
+          <div class="card-header-custom">
+            <img src="/images/istio.svg" width="36px" class="img-card-header" />
+            <h4 class="section-text-bold">Istio Service-mesh Integration</h4>
+          </div>
+          <p class="section-text">
+            Fission integrates with Istio, which is an open platform to connect,
+            manage and secure micro-services. With Istio, users also get the
+            ability to monitor function usage and trace request latency through
+            dashboards.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="feature-card">
+          <div class="card-header-custom">
+            <img
+              src="/images/language.svg"
+              width="36px"
+              class="img-card-header"
+            />
+            <h4 class="section-text-bold">Wide Language Support</h4>
+          </div>
+          <p class="section-text">
+            Fission is extensible to any programming language of your choice.
+            Python, NodeJS, Go, C#, PHP are supported today, but you can build
+            your own custom containers if you need to.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="feature-card">
+          <div class="card-header-custom">
+            <img
+              src="/images/autoscaling.svg"
+              width="36px"
+              class="img-card-header"
+            />
+            <h4 class="section-text-bold">Function Autoscaling</h4>
+          </div>
+          <p class="section-text">
+            Fission provides autoscaling for functions based on CPU usage. In
+            the future, custom metrics will be also supported for scaling
+            functions. You can set the initial and maximum CPU for a function
+            and target CPU at which autoscaling will be triggered.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 {{< blocks/section >}}
 {{% blocks/feature icon="fab fa-app-store-ios" title="Download **from AppStore**" %}}
@@ -90,13 +237,5 @@ We do a [Pull Request](https://github.com/google/docsy-example/pulls) contributi
 For announcement of latest features etc.
 {{% /blocks/feature %}}
 
-
-{{< /blocks/section >}}
-
-{{< blocks/section >}}
-
-<div class="col-12">
-<h1 class="text-center">This is another Section</h1>
-</div>
 
 {{< /blocks/section >}}
