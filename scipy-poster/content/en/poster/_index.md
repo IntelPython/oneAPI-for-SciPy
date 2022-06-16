@@ -4,13 +4,13 @@ linkTitle: Poster
 type: docs
 menu:
   main:
-    weight: 10
+    weight: 20
 
 ---
 
 ## oneAPI for Scientific Python community
 by Diptorup Deb and Oleksandr Pavlyk, Intel Corporation
 
-```{admonition}
+```text
 TODO note
 ```
