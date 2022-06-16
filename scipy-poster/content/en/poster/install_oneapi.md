@@ -2,7 +2,7 @@
 title: "Install Intel(R) oneAPI toolkits"
 date: 2022-06-14
 type: docs
-weight: 2
+weight: 30
 description: >
   Pointers about how to get Intel(R) oneAPI toolkits.
 ---
