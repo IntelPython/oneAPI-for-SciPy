@@ -1,4 +1,4 @@
-baseURL = "https://oleksandr-pavlyk.github.io/oneAPI-for-SciPy/"
+baseURL = "/"
 
 # Language settings
 contentDir = "content/en"
@@ -6,6 +6,11 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
+
+[[menu.main]]
+   name = "oneAPI for SciPy"   # should change this name, or rename poster/
+   weight = 1
+   url = "/"
 
 enableRobotsTXT = true
 
@@ -38,7 +43,7 @@ pygmentsUseClasses = false
 pygmentsUseClassic = false
 #pygmentsOptions = "linenos=table"
 # See https://help.farbox.com/pygments.html
-pygmentsStyle = "default"
+pygmentsStyle = "tango"
 
 # Configure how URLs look like per section.
 [permalinks]
@@ -147,7 +152,7 @@ sidebar_search_disable = false
 # If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
 # add "hide_feedback: true" to the page's front matter.
 [params.ui.feedback]
-enable = true
+enable = false
 # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
 yes = 'Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
 no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.'
