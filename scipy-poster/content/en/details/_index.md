@@ -1,6 +1,6 @@
 ---
 title: "SciPy 2022 virtual poster"
-linkTitle: Poster
+linkTitle: Details
 type: docs
 menu:
   main:

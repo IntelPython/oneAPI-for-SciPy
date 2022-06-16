@@ -54,6 +54,7 @@ on the variety of Intel(R) hardware using preinstalled oneAPI toolkits.
 
 Julia has support for oneAPI [github.com/JuliaGPU/oneAPI.jl][julia-oneAPI].
 
+
 [oneAPI]: https://www.oneapi.io
 [toolkits]: https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html
 [basekit]: https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit.html

@@ -1,5 +1,5 @@
 ---
-title: Why should Scientific Python community embrace oneAPI
+title: About authors
 linkTitle: About
 type: docs
 layout: docs
@@ -9,13 +9,27 @@ menu:
 
 ---
 
-1. oneAPI is an open, cross-industry, standards-based, unified, multiarchitecture, multi-vendor programming model.
-2. DPC++ compiler is being developed in open-source, see http://github.com/intel/llvm, and is being upstreamed into LLVM project itself.
-3. Open source compiler supports [variety of backends][sycl-five-additions], including [Level-Zero][l0], [OpenCL][ocl], [CUDA][cuda], and [HIP][hip].
-3. [oneAPI Math Kernel Library (oneMKL) Interfaces](https://github.com/oneapi-src/oneMKL) supports a collection of third-party libraries associated with supported backends.
+This poster is being presented on behalf of [Python team](https://github.com/IntelPython) at [Intel Corporation](http://www.intel.com).
 
-[sycl-five-additions]: https://www.intel.com/content/www/us/en/developer/articles/technical/five-outstanding-additions-sycl2020.html
-[l0]: https://spec.oneapi.io/level-zero/latest/index.html
-[ocl]: https://www.khronos.org/opencl/
-[cuda]: https://developer.nvidia.com/cuda-toolkit
-[hip]: https://github.com/ROCm-Developer-Tools/HIP
+Our mission is to foster adoption of oneAPI program by Python community at large and 
+Scientific Python community in particular.
+
+To this end, we are developing the following Python packages:
+
+  - [github.com/IntelPython/dpctl][dpctl]
+     - Python bindings to DPC++ runtime classes
+     - support for device selection, sub-device creation, USM memory allocations, context/queue creation
+     - [array API][array-api] implementation using DPC++
+     - integration with [Cython][cython] and [pybind11][pybind11] to facilitate building of oneAPI Python extensions
+     - small footprint
+  - [github.com/IntelPython/dpnp][dpnp]
+     - oneAPI- and oneMKL-powered implementation for array library with NumPy-compatible API
+  - [github.com/IntelPython/numba-dpex][dpex]
+     - Numba extension to compile Python functions for Intel(R) XPUs
+
+[dpctl]: https://github.com/IntelPython/dpctl.git
+[cython]: https://github.com/cython/cython.git
+[pybind11]: https://github.com/pybind/pybind11.git
+[dpnp]: https://github.com/IntelPython/dpnp.git
+[dpex]: https://github.com/IntelPython/numba-dpex.git
+[array-api]: https://data-apis.org/array-api/latest/
