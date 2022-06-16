@@ -2,7 +2,7 @@
 title: "What is oneAPI"
 date: 2022-06-14
 type: docs
-weight: 2
+weight: 20
 description: >
   oneAPI - the standard and its implementation.
 ---
@@ -30,13 +30,14 @@ Intel(R) oneAPI DPC++ compiler is a proprietary product that builds on the open-
 It is part of Intel(R) compiler suite which has completed the [adoption of LLVM infrastructure][icx-adopts-llvm] and is available in oneAPI toolkits.
 In particular, Intel(R) Fortran compiler is freely avialable on all supported platforms in [Intel(R) oneAPI HPC Toolkit][hpckit].
 
+DPC++ leverages standard toolchain runtime libraries, such as `glibc` and `libstdc++` on Linux and `wincrt` on Windows. This makes it possible to use
+Intel C/C++ compilers, including DPC++, to compile Python [native extensions](skbuild.mc) compatible with the CPython and the rest of Python stack. 
+
 In order to enable cross-architecture programming for CPUs and accelerators the DPC++ runtime adopted [layered architecture][layered-architecture].
 Software concepts are mapped to hardware abstraction layer by user-specified [SYCL backend][sycl-five-additions] which programs the specific hardware in use.
 
-DPC++ leverages standard toolchain runtime libraries, such as `libstdc++` on Linux and `winrt` on Windows. This makes it possible to use
-Intel C/C++ compilers, including DPC++, to compile Python [native extensions](skbuild.mc) compatible with the CPython and the rest of Python stack. 
-
-
+An integral part of this layered architecture is provided by [Intel(R) Compute Runtime][compute-runtime]. oneAPI application is a fat binary consisting of
+device codes in a standardized intermediate form [SPIR-V][spriv] and host code which orchestrates tasks of 
 
 ## Additional information
 
@@ -63,3 +64,5 @@ Julia has support for oneAPI [github.com/JuliaGPU/oneAPI.jl][julia-oneAPI].
 [intel-llvm]: https://github.com/intel/llvm.git
 [icx-adopts-llvm]: https://www.intel.com/content/www/us/en/developer/articles/technical/adoption-of-llvm-complete-icx.html
 [llvm-daily-prereleases]: https://github.com/intel/llvm/releases
+[compute-runtime]: https://github.com/intel/compute-runtime.git
+[spriv]: https://www.khronos.org/spir/
