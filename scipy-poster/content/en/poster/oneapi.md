@@ -22,16 +22,16 @@ Intel(R) oneAPI Math Kernel Library ([oneMKL][oneMKL]), etc, as well as
 
 [1]: ../../images/oneapi_basekit.webp "Composition of Intel Base Toolkit"
 
-DPC++ is a LLVM-based compiler project that implements compiler and runtime support for SYCL* language. 
+DPC++ is a LLVM-based compiler project that implements compiler and runtime support for SYCL* language.
 It is being developed in `sycl` branch of the LLVM project fork [github.com/intel/llvm][intel-llvm].
-The project publishes [daily builds][llvm-daily-prereleases] for Linux. 
+The project publishes [daily builds][llvm-daily-prereleases] for Linux.
 
 Intel(R) oneAPI DPC++ compiler is a proprietary product that builds on the open-source DPC++ project.
 It is part of Intel(R) compiler suite which has completed the [adoption of LLVM infrastructure][icx-adopts-llvm] and is available in oneAPI toolkits.
 In particular, Intel(R) Fortran compiler is freely avialable on all supported platforms in [Intel(R) oneAPI HPC Toolkit][hpckit].
 
 DPC++ leverages standard toolchain runtime libraries, such as `glibc` and `libstdc++` on Linux and `wincrt` on Windows. This makes it possible to use
-Intel C/C++ compilers, including DPC++, to compile Python [native extensions](skbuild.mc) compatible with the CPython and the rest of Python stack. 
+Intel C/C++ compilers, including DPC++, to compile Python [native extensions](skbuild.mc) compatible with the CPython and the rest of Python stack.
 
 In order to enable cross-architecture programming for CPUs and accelerators the DPC++ runtime adopted [layered architecture][layered-architecture].
 Software concepts are mapped to hardware abstraction layer by user-specified [SYCL backend][sycl-five-additions] which programs the specific hardware in use.
@@ -39,10 +39,10 @@ Software concepts are mapped to hardware abstraction layer by user-specified [SY
 An integral part of this layered architecture is provided by [Intel(R) Compute Runtime][compute-runtime]. oneAPI application is a fat binary consisting of
 device codes in a standardized intermediate form [SPIR-V][spriv] and host code which orchestrates tasks such as querying of the heterogeneous system it is
 running on, selecting accelerator(s), compiling (jitting) device code in the intermediate representation for the selected device, managing device memory, and
-submitting compiled device code for execution. The host code performs these tasks by using DPC++ runtime, which maps them to hardware abstraction layer, that 
+submitting compiled device code for execution. The host code performs these tasks by using DPC++ runtime, which maps them to hardware abstraction layer, that
 talks to hardware-specific drivers.
 
-![working of oneAPI executable](../../images/oneAPI-executable-diagram.png)
+![working of oneAPI executable](../../images/oneAPI-executable-diagram.webp)
 
 ## Additional information
 
