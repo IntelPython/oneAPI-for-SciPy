@@ -1,10 +1,11 @@
 ---
 title: "Community for Data Parallel Python extensions"
 linkTitle: Community
+layout: community
 type: community
 menu:
   main:
-    weight: 10
+    weight: 30
 
 ---
 
