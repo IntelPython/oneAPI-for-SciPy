@@ -1,6 +1,8 @@
 ---
-title: Why should Scientific Python community should embrace oneAPI
+title: Why should Scientific Python community embrace oneAPI
 linkTitle: About
+type: docs
+layout: docs
 menu:
   main:
     weight: 10
