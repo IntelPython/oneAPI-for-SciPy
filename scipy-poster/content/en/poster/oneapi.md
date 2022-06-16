@@ -37,7 +37,12 @@ In order to enable cross-architecture programming for CPUs and accelerators the 
 Software concepts are mapped to hardware abstraction layer by user-specified [SYCL backend][sycl-five-additions] which programs the specific hardware in use.
 
 An integral part of this layered architecture is provided by [Intel(R) Compute Runtime][compute-runtime]. oneAPI application is a fat binary consisting of
-device codes in a standardized intermediate form [SPIR-V][spriv] and host code which orchestrates tasks of 
+device codes in a standardized intermediate form [SPIR-V][spriv] and host code which orchestrates tasks such as querying of the heterogeneous system it is
+running on, selecting accelerator(s), compiling (jitting) device code in the intermediate representation for the selected device, managing device memory, and
+submitting compiled device code for execution. The host code performs these tasks by using DPC++ runtime, which maps them to hardware abstraction layer, that 
+talks to hardware-specific drivers.
+
+![working of oneAPI executable](../../images/oneAPI-executable-diagram.png)
 
 ## Additional information
 
