@@ -9,8 +9,13 @@ menu:
 ---
 
 ## oneAPI for Scientific Python community
-by Diptorup Deb and Oleksandr Pavlyk, Intel Corporation
+by _Diptorup Deb_ and _Oleksandr Pavlyk_, Intel Corporation
 
-```text
-TODO note
-```
+---
+
+With this poster we would like to inform Scientific Python community about oneAPI programming model for heterogeneous systems
+and how to leverage it for the benefit of Python users.
+
+We hope to interest Python extension authors to start developing portable accelerator aware Python packages using oneAPI.
+This poster presents the tooling to build Python extensions with DPC++, as well as Python binding to DPC++ runtime classes 
+implemented in `dpctl`.
