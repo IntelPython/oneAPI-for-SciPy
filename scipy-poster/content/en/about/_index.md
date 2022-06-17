@@ -21,7 +21,10 @@ To this end, we are developing the following Python packages:
      - support for device selection, sub-device creation, USM memory allocations, context/queue creation
      - [array API][array-api] implementation using DPC++
      - integration with [Cython][cython] and [pybind11][pybind11] to facilitate building of oneAPI Python extensions
-     - small footprint
+     - small footprint, with runtime dependency on
+          - DPC++ runtime
+          - compute runtime
+          - NumPy
   - [github.com/IntelPython/dpnp][dpnp]
      - oneAPI- and oneMKL-powered implementation for array library with NumPy-compatible API
   - [github.com/IntelPython/numba-dpex][dpex]
