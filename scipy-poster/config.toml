@@ -1,4 +1,4 @@
-baseURL = "https://oleksandr-pavlyk.github.io/oneAPI-for-SciPy"
+baseURL = "https://IntelPython.github.io/oneAPI-for-SciPy"
 
 # Language settings
 contentDir = "content/en"
@@ -10,7 +10,7 @@ enableMissingTranslationPlaceholders = true
 [[menu.main]]
    name = "oneAPI for SciPy"   # should change this name, or rename poster/
    weight = 1
-   url = "https://oleksandr-pavlyk.github.io/oneAPI-for-SciPy"
+   url = "https://IntelPython.github.io/oneAPI-for-SciPy"
 
 enableRobotsTXT = true
 

@@ -13,7 +13,7 @@ jobs:
   build-and-deploy:
     name: 'Build and publish'
     runs-on: ubuntu-latest
-    if: "github.repository == 'oleksandr-pavlyk/oneAPI-for-SciPy' && !contains(github.event.head_commit.message, '[skip ci]')"
+    if: "github.repository == 'IntelPython/oneAPI-for-SciPy' && !contains(github.event.head_commit.message, '[skip ci]')"
     steps:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.6.0
@@ -73,7 +73,7 @@ jobs:
 
       - name: Checkout gh-pages
         run: |
-          git remote add tokened_docs https://oleksandr-pavlyk:${{ secrets.GITHUB_TOKEN }}@github.com/oleksandr-pavlyk/oneAPI-for-SciPy.git
+          git remote add tokened_docs https://IntelPython:${{ secrets.GITHUB_TOKEN }}@github.com/IntelPython/oneAPI-for-SciPy.git
           git fetch --all
           git checkout --track tokened_docs/gh-pages
 
