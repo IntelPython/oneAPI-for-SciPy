@@ -5,4 +5,4 @@ This repository contains sources for the virtual poster "oneAPI for Scientific P
 
 It is authored using [Google Docsy](https://www.docsy.dev/) and [Hugo framework](https://gohugo.io/).
 
-Please feel free to provide feedback about the [draft](http://oleksandr-pavlyk.github.io/oneAPI-for-SciPy).
+Please feel free to provide feedback about the [draft](http://IntelPython.github.io/oneAPI-for-SciPy).
