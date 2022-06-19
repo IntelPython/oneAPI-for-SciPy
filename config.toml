@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://IntelPython.github.io/oneAPI-for-SciPy"
 title = "oneAPI for SciPy"
 
 
@@ -10,6 +10,10 @@ defaultContentLanguageInSubdir = false
 # Useful when translating.
 enableMissingTranslationPlaceholders = true
 
+#[[menu.main]]
+#   name = "oneAPI for SciPy"   # should change this name, or rename poster/
+#   weight = 1
+#   url = "https://IntelPython.github.io/oneAPI-for-SciPy"
 
 enableRobotsTXT = true
 
