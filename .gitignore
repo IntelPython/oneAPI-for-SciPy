@@ -1,3 +1,9 @@
 build/
 doctrees/
 *~
+
+/public
+resources/
+node_modules/
+package-lock.json
+.hugo_build.lock

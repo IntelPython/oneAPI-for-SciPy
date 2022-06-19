@@ -14,6 +14,8 @@ enableMissingTranslationPlaceholders = true
 
 enableRobotsTXT = true
 
+disable_toc = true
+
 # Will give values to .Lastmod etc.
 enableGitInfo = true
 
@@ -132,7 +134,7 @@ prism_syntax_highlighting = false
 # User interface configuration
 [params.ui]
 #  Set to true to disable breadcrumb navigation.
-breadcrumb_disable = false
+breadcrumb_disable = true
 # Set to true to disable the About link in the site footer
 footer_about_disable = true
 # Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
@@ -140,7 +142,7 @@ navbar_logo = false
 # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
 navbar_translucent_over_cover_disable = true
 # Enable to show the side bar menu in its compact state.
-sidebar_menu_compact = false
+sidebar_menu_compact = true
 # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
 sidebar_search_disable = false
 
