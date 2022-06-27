@@ -123,9 +123,8 @@ For announcement of latest features etc.
                             </p>
                             <p>
                             Our package <a href="https://intelpython.github.io/dpctl/latest/index.html">dpctl</a>
-                            provides the necessary Python bindings to create a
-                            Python native extension out of a SYCL library and
-                            subsequently use it from Python. Read more...
+                            provides the necessary Python bindings to make a SYCL library into a
+                            Python native extension and subsequently use it from Python.
                         </p>
                     </div>
                 </div>
@@ -145,7 +144,7 @@ For announcement of latest features etc.
                             <p>
                             Our package <a href="https://intelpython.github.io/numba-dpex/latest/index.html">numba-dpex</a>
                             extends the Numba compiler to allow kernel creation
-                            directly in Python via a custom compute API. Read more...
+                            directly in Python via a custom compute API.
                         </p>
                     </div>
                 </div>
@@ -164,8 +163,9 @@ For announcement of latest features etc.
                             specification.   
                             </p>
                             <p>
-                            Implemented using DPC++ <a href="https://intelpython.github.io/dpctl/latest/docfiles/dpctl/dpctl.tensor_pyapi.html#dpctl-tensor-pyapi">dpctl.tensor</a> lets Python users get their job done using tensor operations powered by 
-                            pure SYCL generic kernels for portability. Read more...
+                            <a href="https://intelpython.github.io/dpctl/latest/docfiles/dpctl/dpctl.tensor_pyapi.html#dpctl-tensor-pyapi">dpctl.tensor</a> is a Python native
+                            extension library implemented using SYCL within <a href="https://intelpython.github.io/dpctl/latest/index.html">dpctl</a>.
+                            The library lets Python users get their job done using tensor operations powered by pure SYCL generic kernels for portability.
                         </p>
                     </div>
                 </div>
@@ -180,13 +180,15 @@ For announcement of latest features etc.
                             </h4>
                         </div>
                         <p class="section-text">
-                            Leveraging oneAPI DPC++, oneAPI DPC++ Library and oneAPI MKL, <a href="https://intelpython.github.io/dpnp">dpnp</a> intends to 
-                            provide performant data-parallel drop-in replacement for NumPy.
+                            <a href="https://intelpython.github.io/dpnp">dpnp</a> is a NumPy-like library that is built using oneAPI DPC++ compiler and
+                            oneAPI performance libraries such as oneAPI MKL and oneAPI DPC++ Library.
+                            <a href="https://intelpython.github.io/dpnp">dpnp</a> will provide cross-architecture performance portability to NumPy users
+                            without requiring changes to their existing NumPy code.
                         </p>
                         <p>
-                            While building on <a href="https://intelpython.github.io/dpctl/latest/docfiles/dpctl/dpctl.tensor_pyapi.html#dpctl-tensor-pyapi">dpctl.tensor</a> 
-                            the <a href="https://intelpython.github.io/dpnp">dpnp</a> extends it with richer API surface, 
-                            as well as with linear algebra, fast Fourier transform, and random number generation submodules powered by oneMKL. Read more...  
+                            While building on <a href="https://intelpython.github.io/dpctl/latest/docfiles/dpctl/dpctl.tensor_pyapi.html#dpctl-tensor-pyapi">dpctl.tensor</a>,
+                            the <a href="https://intelpython.github.io/dpnp">dpnp</a> extends it with richer API surface,
+                            as well as with linear algebra, fast Fourier transform, and random number generation submodules powered by oneMKL.
                         </p>
                     </div>
                 </div>
@@ -206,7 +208,6 @@ For announcement of latest features etc.
                         <p>
                             oneAPI Intel LLVM compilers, including DPC++, as well as associated runtimes are 
                             available on conda to support present and future data-parallel extensions. 
-                            Read more...
                         </p>
                     </div>
                 </div>
