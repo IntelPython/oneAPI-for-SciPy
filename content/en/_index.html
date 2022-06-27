@@ -116,10 +116,11 @@ For announcement of latest features etc.
                             <h4 class="section-text-bold">Cross-platform Native Extensions</h4>
                         </div>
                         <p class="section-text">
-                            oneAPI and SYCL lets you build cross-platform libraries
-                            that can be run on different platforms
-                            such as Nvidia GPUS, Intel CPUs and GPUs, or any
-                            other architecture supported by your SYCL compiler.
+                            DPC++ lets you build cross-platform libraries
+                            that can be run on a growing set of heterogeneous devices
+                            supported by the compiler, such as Intel CPUs, GPUs, and FPGAs, 
+                            and also Nvidia GPUs and AMD GPUs.
+                            </p>
                             <p>
                             Our package <a href="https://intelpython.github.io/dpctl/latest/index.html">dpctl</a>
                             provides the necessary Python bindings to create a
@@ -141,6 +142,7 @@ For announcement of latest features etc.
                             data-parallel kernels in SYCL and directly write
                             them in Python.
                             </p>
+                            <p>
                             Our package <a href="https://intelpython.github.io/numba-dpex/latest/index.html">numba-dpex</a>
                             extends the Numba compiler to allow kernel creation
                             directly in Python via a custom compute API. Read more...
@@ -158,7 +160,12 @@ For announcement of latest features etc.
                             </h4>
                         </div>
                         <p class="section-text">
-
+                            Python array library targeting conformance to core <a href="https://data-apis.org/array-api/latest/">Python Array API</a> 
+                            specification.   
+                            </p>
+                            <p>
+                            Implemented using DPC++ <a href="https://intelpython.github.io/dpctl/latest/docfiles/dpctl/dpctl.tensor_pyapi.html#dpctl-tensor-pyapi">dpctl.tensor</a> lets Python users get their job done using tensor operations powered by 
+                            pure SYCL generic kernels for portability. Read more...
                         </p>
                     </div>
                 </div>
@@ -173,7 +180,13 @@ For announcement of latest features etc.
                             </h4>
                         </div>
                         <p class="section-text">
-
+                            Leveraging oneAPI DPC++, oneAPI DPC++ Library and oneAPI MKL, <a href="https://intelpython.github.io/dpnp">dpnp</a> intends to 
+                            provide performant data-parallel drop-in replacement for NumPy.
+                        </p>
+                        <p>
+                            While building on <a href="https://intelpython.github.io/dpctl/latest/docfiles/dpctl/dpctl.tensor_pyapi.html#dpctl-tensor-pyapi">dpctl.tensor</a> 
+                            the <a href="https://intelpython.github.io/dpnp">dpnp</a> extends it with richer API surface, 
+                            as well as with linear algebra, fast Fourier transform, and random number generation submodules powered by oneMKL. Read more...  
                         </p>
                     </div>
                 </div>
@@ -187,8 +200,13 @@ For announcement of latest features etc.
                         </div>
                         <p class="section-text">
                             All the data-parallel extensions for Python packages
-                            are readily available for installation via conda,
-                            pypi, or github. Read more...
+                            are readily available for installation on conda,
+                            PyPI, or github.
+                        </p>
+                        <p>
+                            oneAPI Intel LLVM compilers, including DPC++, as well as associated runtimes are 
+                            available on conda to support present and future data-parallel extensions. 
+                            Read more...
                         </p>
                     </div>
                 </div>
