@@ -4,22 +4,22 @@ title = "oneAPI for Scientific Python Community"
 +++
 
 
-{{<blocks/cover title="" image_anchor="top" height="min" color="light">}}
+{{<blocks/cover title="" image_anchor="top" height="min" color="primary">}}
     <div class="row align-items-left mt-3 pt-3">
 
         <div class="col-lg-12">
-            <p class="display-2 mb-0">oneAPI for Scientific Python Community</p>
-            </p>
-            <a href="https://github.com/diptorupd">Diptorup Deb</a> and
-            <a href="https://github.com/oleksandr-pavlyk">Oleksandr Pavlyk</a>
+            <p class="display-1 mb-0">oneAPI for Scientific Python Community</p>
+            <p></p>
+            <p class="display-4 mb-4">
+            <a href="https://github.com/diptorupd" style="color: lightgrey; font-weight: bold;">Diptorup Deb</a> and
+            <a href="https://github.com/oleksandr-pavlyk" style="color: lightgrey; font-weight: bold;">Oleksandr Pavlyk</a>
             </p>
             <p class="display-5 mb-0">The scientific Python software ecosystem
             for heterogeneous computing is highly fragmented with different set of
             libraries and modules for different architectures. The fragmentation
-            takes away from one of the <a
-            href="https://peps.python.org/pep-0020/">central tenets</a>
-            of Python: <i>"Simple is better than complex"</i>. The poster
-            introduces our ongoing work to introduce a programming model and set
+            goes counter to one of the <a href="https://peps.python.org/pep-0020/">central tenets</a>
+            of Python: "<i>Simple is better than complex</i>".
+            The poster introduces our ongoing work to introduce a programming model and set
             of tools that will help a scientific Python programmer program
             different types of devices such as CPU, GPU, accelerators without
             having to reimplement their code. The work is based on interfacing
@@ -35,7 +35,7 @@ title = "oneAPI for Scientific Python Community"
                 <a class="btn btn-lg btn-secondary mr-3 mb-4" href="{{< relref " /details/quickstart">}}">
                     View example <i class="fas fa-arrow-alt-circle-right ml-2"></i>
                 </a>
-                <a class="btn btn-lg btn-primary mr-3 mb-4" href="{{< relref " /details">}}">
+                <a class="btn btn-lg btn-secondary mr-3 mb-4" href="{{< relref " /details">}}">
                     Sample extension <i class="fas fa-microscope ml-2"></i>
                 </a>
                 <a class="btn btn-lg btn-secondary mr-3 mb-4" href="{{< relref " /details">}}">
@@ -214,10 +214,9 @@ https://www.intel.com/content/www/us/en/developer/articles/technical/five-outsta
 {{< blocks/section color="secondary" >}}
 
 {{% blocks/feature icon="fab fa-python" title="Install extensions using conda" %}}
-```
-conda install dpctl dpnp numba-dppy
-conda install -c dppy/label/dev dpctl dpnp numba-dpex
-```
+<pre style="text-align: left; color: lightgrey; margin-left: 2em;">
+$ conda install -c dppy/label/dev dpctl dpnp numba-dpex
+</pre>
 {{% /blocks/feature %}}
 
 
@@ -232,6 +231,5 @@ Find us on [Gitter](https://gitter.im/Data-Parallel-Python/community) <i class="
 create <i class="fab fa-github"></i> issues for [dpctl](https://github.com/IntelPython/dpctl), [numba-dpex](https://github.com/IntelPython/numba-dpex) or [dpnp](https://github.com/IntelPython/dpnp), <br />
 get help on [Intel Developer Zone](https://community.intel.com/t5/Intel-Distribution-for-Python/bd-p/distribution-python).
 {{% /blocks/feature %}}
-
 
 {{< /blocks/section>}}
