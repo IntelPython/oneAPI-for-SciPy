@@ -24,10 +24,13 @@ title = "oneAPI for Scientific Python Community"
         <div class="pt-2 lead text-center">
             <div class="mx-auto mt-5 mb-5">
                 <a class="btn btn-lg btn-secondary mr-3 mb-4" href="{{< relref " /details/quickstart">}}">
-                    Get Started <i class="fas fa-arrow-alt-circle-right ml-2"></i>
+                    View example <i class="fas fa-arrow-alt-circle-right ml-2"></i>
                 </a>
                 <a class="btn btn-lg btn-primary mr-3 mb-4" href="{{< relref " /details">}}">
-                    Learn More <i class="fas fa-book-reader ml-2"></i>
+                    Sample extension <i class="fas fa-microscope ml-2"></i>
+                </a>
+                <a class="btn btn-lg btn-secondary mr-3 mb-4" href="{{< relref " /details">}}">
+                    Build your own <i class="fas fa-laptop-code ml-2"></i>
                 </a>
                 <p class="lead mt-1"></p>
                 {{< blocks/link-down color="info">}}
@@ -199,21 +202,26 @@ https://www.intel.com/content/www/us/en/developer/articles/technical/five-outsta
             </div>
         </div>
 
-{{< blocks/section>}}
+{{< blocks/section color="secondary" >}}
 
-{{% blocks/feature icon="fab fa-app-store-ios" title="Download **from AppStore**" %}}
-Get the Goldydocs app!
+{{% blocks/feature icon="fab fa-python" title="Install extensions using conda" %}}
+```
+conda install dpctl dpnp numba-dppy
+conda install -c dppy/label/dev dpctl dpnp numba-dpex
+```
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fab fa-github" title="Contributions welcome!" url="https://github.com/google/docsy-example" %}}
-We do a [Pull Request](https://github.com/google/docsy-example/pulls) contributions workflow on **GitHub**.
+{{% blocks/feature icon="fab fa-github" title="Contributions welcome!" %}}
+We do a [Pull Request](https://github.com/IntelPython/dpctl/pulls) contributions workflow on **GitHub** for all projects.
 New users are always welcome!
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fab fa-twitter" title="Follow us on Twitter!" url="https://twitter.com/GoHugoIO" %}}
-For announcement of latest features etc.
+{{% blocks/feature icon="fab fa-gitter" title="Feedback" %}}
+Find us on [Gitter](https://gitter.im/Data-Parallel-Python/community) <i class="fab fa-gitter"></i>, <br />
+create <i class="fab fa-github"></i> issues for [dpctl](https://github.com/IntelPython/dpctl), [numba-dpex](https://github.com/IntelPython/numba-dpex) or [dpnp](https://github.com/IntelPython/dpnp), <br />
+get help on [Intel Developer Zone](https://community.intel.com/t5/Intel-Distribution-for-Python/bd-p/distribution-python).
 {{% /blocks/feature %}}
 
 
