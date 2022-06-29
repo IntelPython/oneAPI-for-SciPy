@@ -177,11 +177,6 @@ enable = false
   url = "https://stackoverflow.com/questions/tagged/intel-oneapi"
   icon = "fab fa-stack-overflow"
   desc = "Practical questions and curated answers about oneAPI"
-[[params.links.user]]
-  name = "Intel Developer Zone"
-  url = "https://community.intel.com/t5/Intel-Distribution-for-Python/bd-p/distribution-python"
-  icon = "fas fa-hands-helping"
-  desc = "Get help on Intel Developer Zone"
 
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
@@ -190,10 +185,10 @@ enable = false
   icon = "fab fa-github"
   desc = "Development takes place here!"
 [[params.links.developer]]
-  name = "Slack"
-  url = "https://example.org/slack"
-  icon = "fab fa-slack"
-  desc = "Chat with other project developers"
+  name = "Intel Developer Zone"
+  url = "https://community.intel.com/t5/Intel-Distribution-for-Python/bd-p/distribution-python"
+  icon = "fas fa-hands-helping"
+  desc = "Get help on Intel Developer Zone"
 
 
 # hugo module configuration
