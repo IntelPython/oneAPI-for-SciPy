@@ -19,7 +19,7 @@ to start exploring oneAPI. We recommend to start with [Jupyter Lab][dev-cloud-ju
 
 To add oneAPI to your local toolbox, download and install the basekit for your operating system from [download page][get-basekit].
 
-{{< alert title="Note" >}} 
+{{< alert title="Note" >}}
 For Linux*, toolkits can be installed using OS's package managers, as well as tried out from within a docker-container. Please refer
 to the download page for specifics.
 {{< /alert >}}
