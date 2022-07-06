@@ -50,8 +50,7 @@ A [device object][device] can be used to query properies of the device, such as 
 To answer the second question on the list we need a digression to explain offloading in oneAPI DPC++ first.
 
 {{% alert title="Offloading in oneAPI DPC++" color="secondary" %}}
-In DPC++, a computation kernel can be specified using generic C++ programming and then the kernel can be offloaded to any device that is supported by an underlying SYCL runtime. 
-The device to which the kernel is offloaded is specified using an **execution queue** when *launching the kernel*. 
+In DPC++, a computation kernel can be specified using generic C++ programming and then the kernel can be offloaded to any device that is supported by an underlying SYCL runtime. The device to which the kernel is offloaded is specified using an **execution queue** when *launching the kernel*.
 
 The oneAPI unified programming model brings portability across heterogeneous architectures. Another important aspect of the programming model is its inherent flexibility that makes it possible to go beyond portability and even strive for performance portability. An oneAPI library may be implemented using C++ techniques such as template metaprogramming or dynamic polymorphism to implement specializations for a generic kernel. If a kernel is implemented polymorphically, the specialized implementation will be dispatched based on the execution queue specified during kernel launch. The oneMKL library is an example of a performance portable oneAPI library.
 
