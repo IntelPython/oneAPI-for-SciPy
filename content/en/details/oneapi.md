@@ -2,7 +2,7 @@
 title: "What is oneAPI"
 date: 2022-06-14
 type: docs
-weight: 20
+weight: 10
 description: >
   oneAPI - the standard and its implementation.
 ---
@@ -10,6 +10,8 @@ description: >
 [oneAPI][oneAPI] is an open standard for a unified application
 programming interface (API) that delivers a common developer experience across
 accelerator architectures, including multi-core CPUs, GPUs, and FPGAs.
+
+### Toolkits
 
 A freely available implementation of the standard is available through
 [Intel(R) oneAPI Toolkits][toolkits]. The [Intel(R) Base Toolkit][basekit] features
@@ -36,6 +38,8 @@ Intel C/C++ compilers, including DPC++, to compile Python [native extensions](sk
 In order to enable cross-architecture programming for CPUs and accelerators the DPC++ runtime adopted [layered architecture][layered-architecture].
 Software concepts are mapped to hardware abstraction layer by user-specified [SYCL backend][sycl-five-additions] which programs the specific hardware in use.
 
+### Compute runtime
+
 An integral part of this layered architecture is provided by [Intel(R) Compute Runtime][compute-runtime]. oneAPI application is a fat binary consisting of
 device codes in a standardized intermediate form [SPIR-V][spriv] and host code which orchestrates tasks such as querying of the heterogeneous system it is
 running on, selecting accelerator(s), compiling (jitting) device code in the intermediate representation for the selected device, managing device memory, and
@@ -44,7 +48,7 @@ talks to hardware-specific drivers.
 
 ![working of oneAPI executable](../../images/oneAPI-executable-diagram.webp)
 
-## Additional information
+### Additional information
 
 [Data Parallel C++ book][dpcpp-book] is an excellent resource to get familiar with programming
 heterogeneous systems using C++ and SYCL*.
