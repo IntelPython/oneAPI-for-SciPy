@@ -110,7 +110,15 @@ programmers. <a href="{{< relref " /details">}}">Read more ...</a>
 
 {{< cardpane >}}
   {{< card header=`<p style="font-weight: bold; text-align: center;">dpctl</p>` >}}
-    Content card 1
+  <a href="https://intelpython.github.io/dpctl">dpctl</a> provides Python users access 
+  to data-parallel computing resources targeted by oneAPI, such as device selection,
+  queue construction (used to specify offload target), Unified Shared Memory (USM) allocation,
+  and USM-based ND-array object. <a href="https://intelpython.github.io/dpctl/latest/docfiles/dpctl/dpctl.tensor_pyapi.html#dpctl-tensor-pyapi">dpctl.tensor</a> 
+  submodule lets Python users get their job done using tensor operations powered by pure 
+  SYCL generic kernels for portability.
+  
+  dpctl <a href="{{< relref " /details/skbuild">}}">provides</a> the necessary Python bindings to make a SYCL library into a Python 
+  native extension and subsequently use it from Python.
   {{< /card >}}
   {{< card header=`<p style="font-weight: bold; text-align: center;">numba-dpex</p>` >}}
   <p class="section-text">
