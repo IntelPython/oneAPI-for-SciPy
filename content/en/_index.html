@@ -8,7 +8,7 @@ title = "oneAPI for Scientific Python Community"
     <div class="row align-items-left mt-3 pt-3">
 
         <div class="col-lg-12">
-            <p class="display-2 mb-0">oneAPI for Scientific Python Community</p>
+            <p class="display-2 mb-0">oneAPI for the Scientific Python Community</p>
             <p></p>
 
             <p class="display-4 mb-4">
@@ -70,7 +70,7 @@ title = "oneAPI for Scientific Python Community"
 programming interface (API) that delivers a common developer experience across
 accelerator architectures, including multi-core CPUs, GPUs, and FPGAs.
 
-<img src="images/oneAPI-diagram.png" width="800" alt="oneAPI unified programming across multiple architectures" />
+<img src="images/oneAPI.svg" width="600" alt="oneAPI unified programming across multiple architectures" />
 
 <p></p>
 
@@ -98,152 +98,54 @@ https://www.intel.com/content/www/us/en/developer/articles/technical/five-outsta
 
 {{% /blocks/lead %}}
 
+{{% blocks/lead color="Light" %}}
 
-        <!---
-  Features:
-     1. Build your own cross-platform native extension
-	 2. Write data-parallel kernels in Python
-	 3. Ready-to-use portable array-API library
-	 4. NumPy API for heterogeneous architectures
-	 5. Pythonic interface to DPC++ runtime classes
-	 6. Available on conda, PyPI, and GitHub
+# Data-parallel extensions for Python
 
-%	 7. DLPack interoperability for arrays
-%	 8. Pythonic device offload programming model
--->
+<p style="text-align: left">
+The data-parallel extensions for Python are a set of Python packages to help
+interface Python with oneAPI and bring the oneAPI programming model to Python
+programmers. <a href="{{< relref " /details">}}">Read more ...</a>
+</p>
 
-        <!--- The Features Section --->
-        <div class="container">
-            <div class="row feature-section">
-                <div class="col-lg-12 center-text" style="margin-bottom: 50px; margin-top: 20px">
-                    <h1 class="section-title"><b>Features</b></h1>
-                </div>
-                <div class="col-lg-4">
-                    <div class="feature-card">
-                        <div class="card-header-custom">
-                            <img src="images/build-extensions.png" width="75px" class="img-card-header" />
-                            </p>
-                            <h4 class="section-text-bold">Cross-platform Native Extensions</h4>
-                        </div>
-                        <p class="section-text">
-                            DPC++ lets you build cross-platform libraries
-                            that can be run on a growing set of heterogeneous devices
-                            supported by the compiler, such as Intel CPUs, GPUs, and FPGAs,
-                            and also Nvidia GPUs and AMD GPUs.
-                            </p>
-                            <p>
-                            Our package <a href="https://intelpython.github.io/dpctl/latest/index.html">dpctl</a>
-                            provides the necessary Python bindings to make a SYCL library into a
-                            Python native extension and subsequently use it from Python.
-                        </p>
-                    </div>
-                </div>
+{{< cardpane >}}
+  {{< card header=`<p style="font-weight: bold; text-align: center;">dpctl</p>` >}}
+    Content card 1
+  {{< /card >}}
+  {{< card header=`<p style="font-weight: bold; text-align: center;">numba-dpex</p>` >}}
+  <p class="section-text">
+    <a href="https://intelpython.github.io/numba-dpex">numba-dpex</a> is a
+    standalone extension to the <a href="https://numba.pydata.org/">Numba</a>
+    JIT compiler. Numba-dpex adds two features to Numba:
+  </p>
+  <p>
+    An OpenCL-style compute API to write oneAPI kernels directly in Python.
+  </p>
+  <p>
+    An extension to Numba's parallelizer to generate kernels from
+    <a href="https://numba.readthedocs.io/en/stable/user/parallel.html">
+    data parallel code regions
+    </a> that are identified by Numba and offload them to user specified device.
+  </p>
+  {{< /card >}}
 
-                <div class="col-lg-4">
-                    <div class="feature-card">
-                        <div class="card-header-custom">
-                            <img src="images/compile-kernels.png" width="75px" class="img-card-header" />
-                            </p>
-                            <h4 class="section-text-bold">Write Kernels Directly in Python</h4>
-                        </div>
-                        <p class="section-text">
-                            If C++ is not your language, you can skip writing
-                            data-parallel kernels in SYCL and directly write
-                            them in Python.
-                            </p>
-                            <p>
-                            Our package <a href="https://intelpython.github.io/numba-dpex/latest/index.html">numba-dpex</a>
-                            extends the Numba compiler to allow kernel creation
-                            directly in Python via a custom compute API.
-                        </p>
-                    </div>
-                </div>
+  {{< card header=`<p style="font-weight: bold; text-align: center;">dpnp</p>` >}}
+  <p class="section-text">
+    <a href="https://intelpython.github.io/dpnp">dpnp</a> is a NumPy-like
+    library that is built using oneAPI DPC++ compiler and oneAPI performance
+    libraries such as oneAPI MKL and oneAPI DPC++ Library. dpnp will provide
+    cross-architecture performance portability to NumPy users without requiring
+    changes to their existing NumPy code.
+  </p>
+  <p>
+    While building on <a
+    href="https://intelpython.github.io/dpctl/latest/docfiles/dpctl/dpctl.tensor_pyapi.html#dpctl-tensor-pyapi">dpctl.tensor</a>,
+    the <a href="https://intelpython.github.io/dpnp">dpnp</a> extends it with
+    richer API surface, as well as with linear algebra, fast Fourier transform,
+    and random number generation submodules powered by oneMKL.
+  </p>
+  {{< /card >}}
 
-                <div class="col-lg-4">
-                    <div class="feature-card">
-                        <div class="card-header-custom">
-                            <img src="images/array-api.png" width="75px" class="img-card-header" />
-                            </p>
-                            <h4 class="section-text-bold">
-                                Cross-architecture Array API
-                            </h4>
-                        </div>
-                        <p class="section-text">
-                            Python array library targeting conformance to core <a href="https://data-apis.org/array-api/latest/">Python Array API</a>
-                            specification.
-                            </p>
-                            <p>
-                            <a href="https://intelpython.github.io/dpctl/latest/docfiles/dpctl/dpctl.tensor_pyapi.html#dpctl-tensor-pyapi">dpctl.tensor</a> is a Python native
-                            extension library implemented using SYCL within <a href="https://intelpython.github.io/dpctl/latest/index.html">dpctl</a>.
-                            The library lets Python users get their job done using tensor operations powered by pure SYCL generic kernels for portability.
-                        </p>
-                    </div>
-                </div>
+{{< /cardpane >}}
 
-                <div class="col-lg-4">
-                    <div class="feature-card">
-                        <div class="card-header-custom">
-                            <img src="images/dpnp-512x512.png" width="55px" class="img-card-header" />
-                            </p>
-                            <h4 class="section-text-bold">
-                                NumPy API for Heterogeneous Architectures
-                            </h4>
-                        </div>
-                        <p class="section-text">
-                            <a href="https://intelpython.github.io/dpnp">dpnp</a> is a NumPy-like library that is built using oneAPI DPC++ compiler and
-                            oneAPI performance libraries such as oneAPI MKL and oneAPI DPC++ Library.
-                            <a href="https://intelpython.github.io/dpnp">dpnp</a> will provide cross-architecture performance portability to NumPy users
-                            without requiring changes to their existing NumPy code.
-                        </p>
-                        <p>
-                            While building on <a href="https://intelpython.github.io/dpctl/latest/docfiles/dpctl/dpctl.tensor_pyapi.html#dpctl-tensor-pyapi">dpctl.tensor</a>,
-                            the <a href="https://intelpython.github.io/dpnp">dpnp</a> extends it with richer API surface,
-                            as well as with linear algebra, fast Fourier transform, and random number generation submodules powered by oneMKL.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="feature-card">
-                        <div class="card-header-custom">
-                            <img src="images/python-package.png" width="75px" class="img-card-header" />
-                            </p>
-                            <h4 class="section-text-bold">Easy to Install</h4>
-                        </div>
-                        <p class="section-text">
-                            All the data-parallel extensions for Python packages
-                            are readily available for installation on conda,
-                            PyPI, or github.
-                        </p>
-                        <p>
-                            oneAPI Intel LLVM compilers, including DPC++, as well as associated runtimes are
-                            available on conda to support present and future data-parallel extensions.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-{{< blocks/section color="secondary" >}}
-
-{{% blocks/feature icon="fab fa-python" title="Install extensions using conda" %}}
-<pre style="text-align: left; color: lightgrey; margin-left: 2em;">
-$ conda install -c dppy/label/dev dpctl dpnp numba-dpex
-</pre>
-{{% /blocks/feature %}}
-
-
-{{% blocks/feature icon="fab fa-github" title="Contributions welcome!" %}}
-We do a [Pull Request](https://github.com/IntelPython/dpctl/pulls) contributions workflow on **GitHub** for all projects.
-New users are always welcome!
-{{% /blocks/feature %}}
-
-
-{{% blocks/feature icon="fab fa-gitter" title="Feedback" %}}
-Find us on [Gitter](https://gitter.im/Data-Parallel-Python/community) <i class="fab fa-gitter"></i>, <br />
-create <i class="fab fa-github"></i> issues for [dpctl](https://github.com/IntelPython/dpctl), [numba-dpex](https://github.com/IntelPython/numba-dpex) or [dpnp](https://github.com/IntelPython/dpnp), <br />
-get help on [Intel Developer Zone](https://community.intel.com/t5/Intel-Distribution-for-Python/bd-p/distribution-python).
-{{% /blocks/feature %}}
-
-{{< /blocks/section>}}
+{{% /blocks/lead %}}
