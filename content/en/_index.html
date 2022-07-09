@@ -110,14 +110,14 @@ programmers. <a href="{{< relref " /details">}}">Read more ...</a>
 
 {{< cardpane >}}
   {{< card header=`<p style="font-weight: bold; text-align: center;">dpctl</p>` >}}
-  <a href="https://intelpython.github.io/dpctl">dpctl</a> provides Python users access 
+  <a href="https://intelpython.github.io/dpctl">dpctl</a> provides Python users access
   to data-parallel computing resources targeted by oneAPI, such as device selection,
   queue construction (used to specify offload target), Unified Shared Memory (USM) allocation,
-  and USM-based ND-array object. <a href="https://intelpython.github.io/dpctl/latest/docfiles/dpctl/dpctl.tensor_pyapi.html#dpctl-tensor-pyapi">dpctl.tensor</a> 
-  submodule lets Python users get their job done using tensor operations powered by pure 
+  and USM-based ND-array object. <a href="https://intelpython.github.io/dpctl/latest/docfiles/dpctl/dpctl.tensor_pyapi.html#dpctl-tensor-pyapi">dpctl.tensor</a>
+  submodule lets Python users get their job done using tensor operations powered by pure
   SYCL generic kernels for portability.
-  
-  dpctl <a href="{{< relref " /details/skbuild">}}">provides</a> the necessary Python bindings to make a SYCL library into a Python 
+
+  dpctl <a href="{{< relref " /details/skbuild">}}">provides</a> the necessary Python bindings to make a SYCL library into a Python
   native extension and subsequently use it from Python.
   {{< /card >}}
   {{< card header=`<p style="font-weight: bold; text-align: center;">numba-dpex</p>` >}}
@@ -157,3 +157,26 @@ programmers. <a href="{{< relref " /details">}}">Read more ...</a>
 {{< /cardpane >}}
 
 {{% /blocks/lead %}}
+
+{{< blocks/section color="secondary" >}}
+
+{{% blocks/feature icon="fab fa-python" title="Install extensions using conda" %}}
+<pre style="text-align: left; color: lightgrey; margin-left: 2em;">
+$ conda install -c dppy/label/dev dpctl dpnp numba-dpex
+</pre>
+{{% /blocks/feature %}}
+
+
+{{% blocks/feature icon="fab fa-github" title="Contributions welcome!" %}}
+We do a [Pull Request](https://github.com/IntelPython/dpctl/pulls) contributions workflow on **GitHub** for all projects.
+New users are always welcome!
+{{% /blocks/feature %}}
+
+
+{{% blocks/feature icon="fab fa-gitter" title="Feedback" %}}
+Find us on [Gitter](https://gitter.im/Data-Parallel-Python/community) <i class="fab fa-gitter"></i>, <br />
+create <i class="fab fa-github"></i> issues for [dpctl](https://github.com/IntelPython/dpctl), [numba-dpex](https://github.com/IntelPython/numba-dpex) or [dpnp](https://github.com/IntelPython/dpnp), <br />
+get help on [Intel Developer Zone](https://community.intel.com/t5/Intel-Distribution-for-Python/bd-p/distribution-python).
+{{% /blocks/feature %}}
+
+{{< /blocks/section>}}
