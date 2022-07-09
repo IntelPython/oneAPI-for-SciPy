@@ -18,7 +18,11 @@ Intel(R) compute runtime needs to be present for DPC++ runtime to be able to tar
 ### Examples of data-parallel extensions
 
 Here we present two ways of building data-parallel extensions illustrated in a companion 
-repo [IntelPython/sample-data-parallel-extensions][sample-dppy-ext].
+repo [IntelPython/sample-data-parallel-extensions][sample-dppy-ext]:
+
+```bash
+git clone https://github.com/IntelPython/sample-data-parallel-extensions.git 
+```
 
 Each extension within respective packages implements data-parallel Python functions to evaluate [Kernel Density Estimate][wiki-kde] at a set a points with signature:
 
