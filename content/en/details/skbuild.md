@@ -103,7 +103,7 @@ f1 = kde.cython_kde_eval(gpu_q, x[:, np.newaxis], data[:, np.newaxis], 3e-6)
 assert np.allclose(f0, f1)
 ```
 
-Of course a naive NumPy reference implementation can not handle the large size input like used above, running out of memory,
+Of course a naive NumPy reference implementation below can not handle the large size input like used above, raising `MemoryError` exception,
 but it can be used to confirm correctness:
 
 ```
@@ -134,6 +134,9 @@ h = 3e-3
 assert np.allclose(f0, fr) and np.allclose(f1, fr)
 ```
 
+`dpctl` can be used to build data-parallel Python extensions which functions operating of USM-based arrays. 
+For example, please refer to [examples/pybind11/onemkl_gemv][onemkl-gemv] in dpctl sources. 
+
 
 [dpcpp-single-source]: https://oneapi-src.github.io/DPCPP_Reference/#data-parallel-c-dpc
 [compilation-flow]: https://www.intel.com/content/www/us/en/develop/documentation/oneapi-programming-guide/top/programming-interface/compilation-flow-overview.html
@@ -145,3 +148,4 @@ assert np.allclose(f0, fr) and np.allclose(f1, fr)
 [kde-skbuild]: https://github.com/IntelPython/sample-data-parallel-extensions/tree/main/kde_skbuild
 [scikit-build]: https://github.com/scikit-build/scikit-build
 [cmake-dpcpp]: https://www.intel.com/content/www/us/en/develop/documentation/oneapi-dpcpp-cpp-compiler-dev-guide-and-reference/top/compiler-setup/use-the-command-line/use-cmake-with-the-intel-oneapi-dpc-c-compiler.html
+[onemkl-gemv]: https://github.com/IntelPython/dpctl/tree/master/examples/pybind11/onemkl_gemv
