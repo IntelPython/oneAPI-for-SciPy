@@ -52,6 +52,10 @@ When using `setuptools` we [used][kde-setuptools] environment variables `CC` and
 `LDSHARED` recognized by `setuptools` to ensure that `dpcpp` is used to compile
 and link extensions.
 
+```bash
+CC=dpcpp LDSHARED="dpcpp --shared" python setup.py develop
+```
+
 The resulting extension is a fat binary, containing both the host code with
 Python bindings and offloading orchestration, and the device code usually stored
 in cross-platform intermediate representation (SPIR-V) and compiled for the
