@@ -173,7 +173,8 @@ included <code>Cython</code> and <code>pybind11</code> bindings for oneAPI. By u
 a native extension writer can focus on writing a data-parallel kernel in DPC++
 while automating the generation of the necessary Python bindings using <code>dpctl</code>.</p><h4 id=building-packages-with-setuptools>Building packages with setuptools</h4><p>When using <code>setuptools</code> we <a href=https://github.com/IntelPython/sample-data-parallel-extensions/tree/main/kde_setuptools>used</a> environment variables <code>CC</code> and
 <code>LDSHARED</code> recognized by <code>setuptools</code> to ensure that <code>dpcpp</code> is used to compile
-and link extensions.</p><p>The resulting extension is a fat binary, containing both the host code with
+and link extensions.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#000>CC</span><span style=color:#ce5c00;font-weight:700>=</span>dpcpp <span style=color:#000>LDSHARED</span><span style=color:#ce5c00;font-weight:700>=</span><span style=color:#4e9a06>&#34;dpcpp --shared&#34;</span> python setup.py develop
+</span></span></code></pre></div><p>The resulting extension is a fat binary, containing both the host code with
 Python bindings and offloading orchestration, and the device code usually stored
 in cross-platform intermediate representation (SPIR-V) and compiled for the
 device indicated via the execution queue argument using tooling from compute
