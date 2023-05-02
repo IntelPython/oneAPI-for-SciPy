@@ -189,7 +189,7 @@ For example, consider
 # Use usm_type = 'device' to get USM-device allocation (default), 
 #     usm_type = 'shared' to get USM-shared allocation,
 #     usm_type = 'host'   to get USM-host allocation
-def dpctl.tensor.empy(..., device=None, usm_type=None, sycl_queue=None) -> dpctl.tensor.usm_ndarray: ...
+def dpctl.tensor.empty(..., device=None, usm_type=None, sycl_queue=None) -> dpctl.tensor.usm_ndarray: ...
 ```
 
 The keyword `device` is [mandated by the array API][array-api-device-syntax]. In `dpctl.tensor` the allowed values of the keyword are
